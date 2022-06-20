@@ -1,11 +1,19 @@
+import Button from "./event/Button";
+
 function Event({ numero }) {
   function myEvent() {
-    console.log(`Opa, fui ativado ${numero}`);
+    console.log(`Ativando primeiro avento`);
   }
+
+  function secondEvent() {
+    console.log("Ativando segundo evento");
+  }
+
   return (
     <div>
       <p>Clique para disparar um evento:</p>
-      <button onClick={myEvent}>Ativar</button>
+      <Button event={myEvent} text="Primeiro Evento" />
+      <Button event={secondEvent} text="Segundo Evento" />
     </div>
   );
 }
